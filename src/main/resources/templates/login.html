@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymleaf.org">
+<head>
+        <title>O'block Login</title>
+    <link rel="stylesheet" th:href="@{/form-stylesheet.css}">
+</head>
+<body class="body1">
+<form class="form-wrapper" method="post" th:object="${user}" th:action="@{/submitUser}" >
+      <div class="form-item">
+<!--           <p style="color:red" th:errors="*{UserName}"></p>-->
+          <input type="text" name="user" required="required" placeholder="Username" autofocus> </input>
+    </div>
+
+    <div class="form-item">
+        <input type="password" name="pass" required="required" placeholder="Password" autofocus> </input>
+    </div>
+
+    <div class="button-panel">
+        <input type="submit" class="button" title="Log in" name="login" value="Login"> </input>
+    </div>
+<!--    <p >forgot password ? <a style="color:red" th:href="sign-up">Click</a></p>-->
+</form>
+</body>
+</html>
